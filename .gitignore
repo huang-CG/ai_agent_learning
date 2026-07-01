@@ -1,0 +1,11 @@
+venv/
+.env
+__pycache__/
+*.pyc
+*.7z
+*.zip
+API_key*
+.pytest_cache/
+.idea/
+.vscode/
+*.log
