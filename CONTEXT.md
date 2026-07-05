@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-04 | 状态：**D4 ✅ 完成**
+> 最后更新：2026-07-05 | 状态：**D5 ✅ 完成**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    4 / 90 ✅
-Phase:  0 (D4/7 完成)
-Next:   D5 Git 与项目结构 · 提交 D2–D4
+Day:    5 / 90 ✅
+Phase:  0 (D5/7 完成)
+Next:   D6 面向对象 · OOP 通讯录
 ```
 
 ---
@@ -37,7 +37,7 @@ Next:   D5 Git 与项目结构 · 提交 D2–D4
 
 | Ph | 范围 | 状态 | 通关标准 |
 |---|---|---|---|
-| 0 | D1–7 | 🔄 4/7 | Python + 首次 API 调用 |
+| 0 | D1–7 | 🔄 5/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ⬜ | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ⬜ | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
@@ -52,6 +52,7 @@ Next:   D5 Git 与项目结构 · 提交 D2–D4
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D5 | 2026-07-05 | 4h | Git教程✅ GitHub push✅ README✅ OOP预习✅ D3→D6映射✅ | D2–4 commit 非亲手；命令误敲 | 5 | 4 |
 | D4 | 2026-07-04 | 3h | 模块/pip✅ requests✅ 天气API✅ 中文格式化✅ | 理论散、语法/结构弱 | 3 | 4 |
 | D3 | 2026-07-03 | 3h | 函数✅ 通讯录✅ JSON持久化✅ 全功能通过 | load vs list、break误用 | 4 | 4 |
 | D2 | 2026-07-02 | 3h | 速通Py 1–2章✅ 计算器✅ 交互模式✅ | 题意理解难、缩进错误 | 2 | 3 |
@@ -80,6 +81,8 @@ Next:   D5 Git 与项目结构 · 提交 D2–D4
 **D3**：列表+字典；`json.load/dump`；多函数 + 菜单循环
 
 **D4**：`pip`/`import` 第三方库；`requests.get` + `.json()`；URL `?` 参数；`dict.get`
+
+**D5**：`git add/commit/push/pull`；GitHub 远程仓库；文件状态（Untracked→Staged→Committed）；OOP 预习（class/`__init__`/self）
 
 **薄弱点（持续）**：语法结构（if/elif、缩进、函数层级）；理论吸收偏散
 
@@ -110,6 +113,7 @@ Next:   D5 Git 与项目结构 · 提交 D2–D4
 | 2026-07-03 | **D3 完成**，自评 4 / Agent 4 |
 | 2026-07-04 | **D4 完成**，自评 3 / Agent 4；理论改单线+语法加强 |
 | 2026-07-04 | 求职画像：广州/非全职/AI应用岗可；Java 主线后再学 |
+| 2026-07-05 | **D5 完成**，自评 5 / Agent 4；GitHub [ai_agent_learning](https://github.com/huang-CG/ai_agent_learning) |
 
 ---
 
@@ -135,6 +139,7 @@ Next:   D5 Git 与项目结构 · 提交 D2–D4
 | `exercises/day02/calculator.py` | D2 计算器 |
 | `exercises/day03/address_book.py` | D3 通讯录 |
 | `exercises/day04/weather.py` | D4 天气 API |
+| GitHub `huang-CG/ai_agent_learning` | D5 远程仓库 |
 
 ---
 
