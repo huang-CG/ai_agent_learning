@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-05 | 状态：**D5 ✅ 完成**
+> 最后更新：2026-07-06 | 状态：**D6 ✅ 完成**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    5 / 90 ✅
-Phase:  0 (D5/7 完成)
-Next:   D6 面向对象 · OOP 通讯录
+Day:    6 / 90 ✅
+Phase:  0 (D6/7 完成)
+Next:   D7 首次 LLM API 调用 · 命令行 AI 问答
 ```
 
 ---
@@ -37,7 +37,7 @@ Next:   D6 面向对象 · OOP 通讯录
 
 | Ph | 范围 | 状态 | 通关标准 |
 |---|---|---|---|
-| 0 | D1–7 | 🔄 5/7 | Python + 首次 API 调用 |
+| 0 | D1–7 | 🔄 6/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ⬜ | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ⬜ | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
@@ -52,6 +52,7 @@ Next:   D6 面向对象 · OOP 通讯录
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D6 | 2026-07-06 | 3h | OOP通讯录✅ Contact对象✅ JSON持久化✅ D7预习✅ | 未保存代码、dict/Contact混用、list_all误写 | 4 | 4 |
 | D5 | 2026-07-05 | 4h | Git教程✅ GitHub push✅ README✅ OOP预习✅ D3→D6映射✅ | D2–4 commit 非亲手；命令误敲 | 5 | 4 |
 | D4 | 2026-07-04 | 3h | 模块/pip✅ requests✅ 天气API✅ 中文格式化✅ | 理论散、语法/结构弱 | 3 | 4 |
 | D3 | 2026-07-03 | 3h | 函数✅ 通讯录✅ JSON持久化✅ 全功能通过 | load vs list、break误用 | 4 | 4 |
@@ -84,6 +85,8 @@ Next:   D6 面向对象 · OOP 通讯录
 
 **D5**：`git add/commit/push/pull`；GitHub 远程仓库；文件状态（Untracked→Staged→Committed）；OOP 预习（class/`__init__`/self）
 
+**D6**：OOP 通讯录；`Contact` / `AddressBook`；`self.contacts`；JSON dict ↔ Contact 转换；`with open(..., "w")`
+
 **薄弱点（持续）**：语法结构（if/elif、缩进、函数层级）；理论吸收偏散
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -114,6 +117,7 @@ Next:   D6 面向对象 · OOP 通讯录
 | 2026-07-04 | **D4 完成**，自评 3 / Agent 4；理论改单线+语法加强 |
 | 2026-07-04 | 求职画像：广州/非全职/AI应用岗可；Java 主线后再学 |
 | 2026-07-05 | **D5 完成**，自评 5 / Agent 4；GitHub [ai_agent_learning](https://github.com/huang-CG/ai_agent_learning) |
+| 2026-07-06 | **D6 完成**，自评 4 / Agent 4；OOP 通讯录 + D7 DeepSeek API 预习 |
 
 ---
 
@@ -139,6 +143,7 @@ Next:   D6 面向对象 · OOP 通讯录
 | `exercises/day02/calculator.py` | D2 计算器 |
 | `exercises/day03/address_book.py` | D3 通讯录 |
 | `exercises/day04/weather.py` | D4 天气 API |
+| `exercises/day06/address_book_oop.py` | D6 OOP 通讯录 |
 | GitHub `huang-CG/ai_agent_learning` | D5 远程仓库 |
 
 ---
