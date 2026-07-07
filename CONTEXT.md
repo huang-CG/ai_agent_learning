@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-06 | 状态：**D6 ✅ 完成**
+> 最后更新：2026-07-07 | 状态：**D7 ✅ 完成 · Phase 0 通关**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    6 / 90 ✅
-Phase:  0 (D6/7 完成)
-Next:   D7 首次 LLM API 调用 · 命令行 AI 问答
+Day:    7 / 90 ✅
+Phase:  0 ✅ 通关 → Phase 1 开始
+Next:   D8 LLM 基础概念 · temperature 实验
 ```
 
 ---
@@ -37,8 +37,8 @@ Next:   D7 首次 LLM API 调用 · 命令行 AI 问答
 
 | Ph | 范围 | 状态 | 通关标准 |
 |---|---|---|---|
-| 0 | D1–7 | 🔄 6/7 | Python + 首次 API 调用 |
-| 1 | D8–17 | ⬜ | Prompt 实验 + Function Calling |
+| 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
+| 1 | D8–17 | 🔄 待开始 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ⬜ | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
@@ -52,6 +52,7 @@ Next:   D7 首次 LLM API 调用 · 命令行 AI 问答
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D7 | 2026-07-07 | 2h | DeepSeek CLI问答✅ ask_ai+main✅ POST/JSON解析✅ Phase0复盘✅ | 全角括号、URL/role拼写；文档模型名差异 | 4 | 4 |
 | D6 | 2026-07-06 | 3h | OOP通讯录✅ Contact对象✅ JSON持久化✅ D7预习✅ | 未保存代码、dict/Contact混用、list_all误写 | 4 | 4 |
 | D5 | 2026-07-05 | 4h | Git教程✅ GitHub push✅ README✅ OOP预习✅ D3→D6映射✅ | D2–4 commit 非亲手；命令误敲 | 5 | 4 |
 | D4 | 2026-07-04 | 3h | 模块/pip✅ requests✅ 天气API✅ 中文格式化✅ | 理论散、语法/结构弱 | 3 | 4 |
@@ -87,7 +88,9 @@ Next:   D7 首次 LLM API 调用 · 命令行 AI 问答
 
 **D6**：OOP 通讯录；`Contact` / `AddressBook`；`self.contacts`；JSON dict ↔ Contact 转换；`with open(..., "w")`
 
-**薄弱点（持续）**：语法结构（if/elif、缩进、函数层级）；理论吸收偏散
+**D7**：DeepSeek Chat Completions；`requests.post` + `json=body`；`choices[0].message.content`；`os.getenv` + `.env`；`raise_for_status`
+
+**薄弱点（持续）**：语法结构（if/elif、缩进、函数层级、拼写）；理论吸收偏散
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
 
@@ -118,6 +121,7 @@ Next:   D7 首次 LLM API 调用 · 命令行 AI 问答
 | 2026-07-04 | 求职画像：广州/非全职/AI应用岗可；Java 主线后再学 |
 | 2026-07-05 | **D5 完成**，自评 5 / Agent 4；GitHub [ai_agent_learning](https://github.com/huang-CG/ai_agent_learning) |
 | 2026-07-06 | **D6 完成**，自评 4 / Agent 4；OOP 通讯录 + D7 DeepSeek API 预习 |
+| 2026-07-07 | **D7 完成**，自评 4 / Agent 4；首次 LLM API + **Phase 0 通关** |
 
 ---
 
@@ -144,6 +148,7 @@ Next:   D7 首次 LLM API 调用 · 命令行 AI 问答
 | `exercises/day03/address_book.py` | D3 通讯录 |
 | `exercises/day04/weather.py` | D4 天气 API |
 | `exercises/day06/address_book_oop.py` | D6 OOP 通讯录 |
+| `exercises/day07/chat.py` | D7 命令行 AI 问答 |
 | GitHub `huang-CG/ai_agent_learning` | D5 远程仓库 |
 
 ---
@@ -154,6 +159,17 @@ Next:   D7 首次 LLM API 调用 · 命令行 AI 问答
 早上：报「今天 X 小时，Day N 开始」
 晚上：报「今日学习完成」+ 自评 → 更新两文档 + Agent 客观评分
 ```
+
+### 每日刷题（D7 起，学员确认 2026-07-08）
+
+| 类型 | 数量 | 时机 | 规则 |
+|------|------|------|------|
+| **力扣编程题** | 1～2 道/天 | 当日课程结束后**当场做**，贴代码给 Agent 检查 | 从「简单」起步，根据完成情况**循序渐进**加难度 |
+| **理论选择题** | 1～2 道/天 | **零碎时间**自己做，像八股/概念自测 | 附参考答案与「为什么」；根据掌握情况逐步加难 |
+
+- 编程题主战场：**力扣中国站**（简单 → 简单+ → 中等）
+- 理论题：Agent **自拟**或从**牛客选择题**挑选（对齐当日知识）；附参考答案与「为什么」
+- 牛客：仅作概念选择题补充，不作为编程题主来源
 
 ## 换新窗口时
 
