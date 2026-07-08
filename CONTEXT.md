@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-07 | 状态：**D7 ✅ 完成 · Phase 0 通关**
+> 最后更新：2026-07-08 | 状态：**D8 ✅ 完成 · Phase 1 进行中**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    7 / 90 ✅
-Phase:  0 ✅ 通关 → Phase 1 开始
-Next:   D8 LLM 基础概念 · temperature 实验
+Day:    8 / 90 ✅
+Phase:  1 (D8/17 进行中)
+Next:   D9 Prompt 基础 · 5 种 Prompt 练习
 ```
 
 ---
@@ -38,7 +38,7 @@ Next:   D8 LLM 基础概念 · temperature 实验
 | Ph | 范围 | 状态 | 通关标准 |
 |---|---|---|---|
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
-| 1 | D8–17 | 🔄 待开始 | Prompt 实验 + Function Calling |
+| 1 | D8–17 | 🔄 1/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ⬜ | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
@@ -52,6 +52,7 @@ Next:   D8 LLM 基础概念 · temperature 实验
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D8 | 2026-07-08 | 3h | LLM概念✅ temperature实验✅ try/except✅ FizzBuzz✅ | 廖雪峰旧链接404 | 4 | 4 |
 | D7 | 2026-07-07 | 2h | DeepSeek CLI问答✅ ask_ai+main✅ POST/JSON解析✅ Phase0复盘✅ | 全角括号、URL/role拼写；文档模型名差异 | 4 | 4 |
 | D6 | 2026-07-06 | 3h | OOP通讯录✅ Contact对象✅ JSON持久化✅ D7预习✅ | 未保存代码、dict/Contact混用、list_all误写 | 4 | 4 |
 | D5 | 2026-07-05 | 4h | Git教程✅ GitHub push✅ README✅ OOP预习✅ D3→D6映射✅ | D2–4 commit 非亲手；命令误敲 | 5 | 4 |
@@ -90,6 +91,8 @@ Next:   D8 LLM 基础概念 · temperature 实验
 
 **D7**：DeepSeek Chat Completions；`requests.post` + `json=body`；`choices[0].message.content`；`os.getenv` + `.env`；`raise_for_status`
 
+**D8**：LLM/Token/上下文窗口/幻觉；`temperature` 参数实验；`try/except`（ValueError/ZeroDivisionError）
+
 **薄弱点（持续）**：语法结构（if/elif、缩进、函数层级、拼写）；理论吸收偏散
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -122,6 +125,7 @@ Next:   D8 LLM 基础概念 · temperature 实验
 | 2026-07-05 | **D5 完成**，自评 5 / Agent 4；GitHub [ai_agent_learning](https://github.com/huang-CG/ai_agent_learning) |
 | 2026-07-06 | **D6 完成**，自评 4 / Agent 4；OOP 通讯录 + D7 DeepSeek API 预习 |
 | 2026-07-07 | **D7 完成**，自评 4 / Agent 4；首次 LLM API + **Phase 0 通关** |
+| 2026-07-08 | **D8 完成**，自评 4 / Agent 4；LLM 概念 + temperature；每日刷题规则确认 |
 
 ---
 
@@ -168,7 +172,7 @@ Next:   D8 LLM 基础概念 · temperature 实验
 | **理论选择题** | 1～2 道/天 | **零碎时间**自己做，像八股/概念自测 | 附参考答案与「为什么」；根据掌握情况逐步加难 |
 
 - 编程题主战场：**力扣中国站**（简单 → 简单+ → 中等）
-- 理论题：Agent **自拟**或从**牛客选择题**挑选（对齐当日知识）；附参考答案与「为什么」
+- 理论题：Agent **自拟**或从**牛客选择题**挑选；**不必绑当天课程**，可混入未学概念（当预习/八股）；附参考答案与「为什么」
 - 牛客：仅作概念选择题补充，不作为编程题主来源
 
 ## 换新窗口时

@@ -20,7 +20,7 @@ DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 MODEL = "deepseek-chat"
 
 
-def ask_ai(question: str) -> str:
+def ask_ai(question: str, temperature: float = 0.7) -> str:
     """向 DeepSeek 发 POST 请求，返回 AI 回答文本"""
     # TODO: 组 url / headers / body，requests.post，解析 choices[0].message.content
     url = f"{DEEPSEEK_BASE_URL}/chat/completions"
@@ -31,11 +31,19 @@ def ask_ai(question: str) -> str:
     body = {
         "model": MODEL,
         "messages": [{"role": "user", "content": question}],
+        "temperature": temperature,
     }
     response = requests.post(url, headers=headers, json=body, timeout=30)
     response.raise_for_status()
     data = response.json()
     return data["choices"][0]["message"]["content"]
+
+def test_temperature():
+    question = "用三句话介绍广州"
+    for temp in (0, 0.7, 1.2):
+        print(f"\n========== temperature: {temp} ==========")
+        answer = ask_ai(question, temp)
+        print(answer)
 
 def main() -> None:
     """主循环：输入问题 → 打印 AI 回答；quit/exit 退出"""
@@ -62,3 +70,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    #test_temperature()
