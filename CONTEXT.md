@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-10 | 状态：**D10 ✅ 完成**
+> 最后更新：2026-07-11 | 状态：**D11 ✅ 完成**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    10 / 90 ✅
-Phase:  1 (D10/17 进行中)
-Next:   D11 API 深入 · 流式输出 streaming
+Day:    11 / 90 ✅
+Phase:  1 (D11/17 进行中)
+Next:   D12 多轮对话 · messages 历史
 ```
 
 ---
@@ -38,7 +38,7 @@ Next:   D11 API 深入 · 流式输出 streaming
 | Ph | 范围 | 状态 | 通关标准 |
 |---|---|---|---|
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
-| 1 | D8–17 | 🔄 3/10 | Prompt 实验 + Function Calling |
+| 1 | D8–17 | 🔄 4/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ⬜ | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
@@ -52,6 +52,7 @@ Next:   D11 API 深入 · 流式输出 streaming
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D11 | 2026-07-11 | 3h | 流式✅ 四参数✅ max_tokens实验✅ 217 set✅ | 代码初读吃力；list超时 | 4 | 4 |
 | D10 | 2026-07-10 | 3h | CoT对比✅ cot_lab✅ 鸡兔同笼✅ 有效括号✅ | 括号题循环内过早return；False大小写 | 4 | 4 |
 | D9 | 2026-07-09 | 2h | 5种Prompt✅ system/user✅ prompt_lab✅ 两数之和暴力✅ | range/!语法；示例3用i!=j；Few-shot延后 | 4 | 4 |
 | D8 | 2026-07-08 | 3h | LLM概念✅ temperature实验✅ try/except✅ FizzBuzz✅ | 廖雪峰旧链接404 | 4 | 4 |
@@ -99,7 +100,9 @@ Next:   D11 API 深入 · 流式输出 streaming
 
 **D10**：CoT 逐步推理；普通 vs CoT 对比；CoT + 格式约束；栈（有效括号）；`enumerate`；dict 一遍解（两数之和）
 
-**薄弱点（持续）**：语法结构（if/elif、缩进、循环内 return 时机、布尔大小写）；理论吸收偏散
+**D11**：API 参数 top_p/max_tokens/stop；流式 SSE/`[DONE]`/`delta.content`；`stream_chat.py`；set vs list（217）；O(n) vs O(n²)
+
+**薄弱点（持续）**：语法结构（if/elif、循环内 return）；读 Agent 生成代码需注释辅助；理论吸收偏散
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
 
@@ -134,6 +137,7 @@ Next:   D11 API 深入 · 流式输出 streaming
 | 2026-07-08 | **D8 完成**，自评 4 / Agent 4；LLM 概念 + temperature；每日刷题规则确认 |
 | 2026-07-09 | **D9 完成**，自评 4 / Agent 4；Prompt 5 模板 + 两数之和 |
 | 2026-07-10 | **D10 完成**，自评 4 / Agent 4；CoT + 有效括号；笔记流程：写前向学员要感悟 |
+| 2026-07-11 | **D11 完成**，自评 4 / Agent 4；流式 + set；练习代码加中文注释 |
 
 ---
 
@@ -163,6 +167,7 @@ Next:   D11 API 深入 · 流式输出 streaming
 | `exercises/day07/chat.py` | D7 命令行 AI 问答 |
 | `exercises/day09/prompt_lab.py` | D9 Prompt 实验 |
 | `exercises/day10/cot_lab.py` | D10 CoT 对比实验 |
+| `exercises/day11/stream_chat.py` | D11 流式 CLI |
 | GitHub `huang-CG/ai_agent_learning` | D5 远程仓库 |
 
 ---
