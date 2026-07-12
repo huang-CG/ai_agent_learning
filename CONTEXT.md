@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-11 | 状态：**D11 ✅ 完成**
+> 最后更新：2026-07-12 | 状态：**D12 ✅ 完成**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    11 / 90 ✅
-Phase:  1 (D11/17 进行中)
-Next:   D12 多轮对话 · messages 历史
+Day:    12 / 90 ✅
+Phase:  1 (D12/17 进行中)
+Next:   D13 System Prompt 设计 · 3 版对比
 ```
 
 ---
@@ -38,7 +38,7 @@ Next:   D12 多轮对话 · messages 历史
 | Ph | 范围 | 状态 | 通关标准 |
 |---|---|---|---|
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
-| 1 | D8–17 | 🔄 4/10 | Prompt 实验 + Function Calling |
+| 1 | D8–17 | 🔄 5/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ⬜ | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
@@ -52,6 +52,7 @@ Next:   D12 多轮对话 · messages 历史
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D12 | 2026-07-12 | 3h | 多轮✅ history_chat✅ trim✅ 121股票✅ 流程图✅ | 代码靠注释；min/max初学 | 4 | 4 |
 | D11 | 2026-07-11 | 3h | 流式✅ 四参数✅ max_tokens实验✅ 217 set✅ | 代码初读吃力；list超时 | 4 | 4 |
 | D10 | 2026-07-10 | 3h | CoT对比✅ cot_lab✅ 鸡兔同笼✅ 有效括号✅ | 括号题循环内过早return；False大小写 | 4 | 4 |
 | D9 | 2026-07-09 | 2h | 5种Prompt✅ system/user✅ prompt_lab✅ 两数之和暴力✅ | range/!语法；示例3用i!=j；Few-shot延后 | 4 | 4 |
@@ -102,7 +103,9 @@ Next:   D12 多轮对话 · messages 历史
 
 **D11**：API 参数 top_p/max_tokens/stop；流式 SSE/`[DONE]`/`delta.content`；`stream_chat.py`；set vs list（217）；O(n) vs O(n²)
 
-**薄弱点（持续）**：语法结构（if/elif、循环内 return）；读 Agent 生成代码需注释辅助；理论吸收偏散
+**D12**：messages 多轮历史；`append` user/assistant；`trim_history`；`history_chat.py`；121 一次遍历
+
+**薄弱点（持续）**：语法结构；读 Agent 代码需注释；力扣新语法（min/max/inf）需巩固
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
 
@@ -138,6 +141,8 @@ Next:   D12 多轮对话 · messages 历史
 | 2026-07-09 | **D9 完成**，自评 4 / Agent 4；Prompt 5 模板 + 两数之和 |
 | 2026-07-10 | **D10 完成**，自评 4 / Agent 4；CoT + 有效括号；笔记流程：写前向学员要感悟 |
 | 2026-07-11 | **D11 完成**，自评 4 / Agent 4；流式 + set；练习代码加中文注释 |
+| 2026-07-12 | **D12 完成**，自评 4 / Agent 4；多轮 messages + 121；流程图 `notes/diagrams/` |
+| 2026-07-12 | 理论题规则：Agent **随机出**，学过/未学均可；零碎自测，非必修 |
 
 ---
 
@@ -168,6 +173,8 @@ Next:   D12 多轮对话 · messages 历史
 | `exercises/day09/prompt_lab.py` | D9 Prompt 实验 |
 | `exercises/day10/cot_lab.py` | D10 CoT 对比实验 |
 | `exercises/day11/stream_chat.py` | D11 流式 CLI |
+| `exercises/day12/history_chat.py` | D12 多轮对话 |
+| `notes/diagrams/day12-messages-flow.md` | D12 messages 流程图 |
 | GitHub `huang-CG/ai_agent_learning` | D5 远程仓库 |
 
 ---
@@ -184,10 +191,10 @@ Next:   D12 多轮对话 · messages 历史
 | 类型 | 数量 | 时机 | 规则 |
 |------|------|------|------|
 | **力扣编程题** | 1～2 道/天 | 当日课程结束后**当场做**，贴代码给 Agent 检查 | 从「简单」起步，根据完成情况**循序渐进**加难度 |
-| **理论选择题** | 1～2 道/天 | **零碎时间**自己做，像八股/概念自测 | 附参考答案与「为什么」；根据掌握情况逐步加难 |
+| **理论选择题** | 1～2 道/天 | **零碎时间**自己做，像八股/概念自测 | Agent **随机出**；学过的/没学过的均可；附参考答案与「为什么」 |
 
 - 编程题主战场：**力扣中国站**（简单 → 简单+ → 中等）
-- 理论题：Agent **自拟**或从**牛客选择题**挑选；**不必绑当天课程**，可混入未学概念（当预习/八股）；附参考答案与「为什么」
+- 理论题：Agent **随机自拟**（或牛客挑选）；**不必绑当天课程**；**学过的 + 未学的**都可出（复习/八股/预习）；附参考答案与「为什么」；**不做不算当天未完成**
 - 牛客：仅作概念选择题补充，不作为编程题主来源
 
 ## 换新窗口时
