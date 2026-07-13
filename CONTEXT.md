@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-12 | 状态：**D12 ✅ 完成**
+> 最后更新：2026-07-13 | 状态：**D13 ✅ 完成**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    12 / 90 ✅
-Phase:  1 (D12/17 进行中)
-Next:   D13 System Prompt 设计 · 3 版对比
+Day:    13 / 90 ✅
+Phase:  1 (D13/17 进行中)
+Next:   D14 Function Calling 原理 · 流程图
 ```
 
 ---
@@ -38,7 +38,7 @@ Next:   D13 System Prompt 设计 · 3 版对比
 | Ph | 范围 | 状态 | 通关标准 |
 |---|---|---|---|
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
-| 1 | D8–17 | 🔄 5/10 | Prompt 实验 + Function Calling |
+| 1 | D8–17 | 🔄 6/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ⬜ | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
@@ -52,6 +52,7 @@ Next:   D13 System Prompt 设计 · 3 版对比
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D13 | 2026-07-13 | 3h | 4原则✅ A/B/C对比✅ 选B✅ 改C✅ 283双指针✅ | range/len混淆；283需提示 | 3 | 4 |
 | D12 | 2026-07-12 | 3h | 多轮✅ history_chat✅ trim✅ 121股票✅ 流程图✅ | 代码靠注释；min/max初学 | 4 | 4 |
 | D11 | 2026-07-11 | 3h | 流式✅ 四参数✅ max_tokens实验✅ 217 set✅ | 代码初读吃力；list超时 | 4 | 4 |
 | D10 | 2026-07-10 | 3h | CoT对比✅ cot_lab✅ 鸡兔同笼✅ 有效括号✅ | 括号题循环内过早return；False大小写 | 4 | 4 |
@@ -105,7 +106,9 @@ Next:   D13 System Prompt 设计 · 3 版对比
 
 **D12**：messages 多轮历史；`append` user/assistant；`trim_history`；`history_chat.py`；121 一次遍历
 
-**薄弱点（持续）**：语法结构；读 Agent 代码需注释；力扣新语法（min/max/inf）需巩固
+**D13**：System Prompt 四原则（角色/边界/格式/拒绝）；A/B/C 对比选优；`system_prompt_lab.py`；283 双指针挤非 0
+
+**薄弱点（持续）**：语法结构；数组遍历（`range(len)` vs `len`）；读 Agent 代码需注释；力扣双指针初接触
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
 
@@ -143,6 +146,7 @@ Next:   D13 System Prompt 设计 · 3 版对比
 | 2026-07-11 | **D11 完成**，自评 4 / Agent 4；流式 + set；练习代码加中文注释 |
 | 2026-07-12 | **D12 完成**，自评 4 / Agent 4；多轮 messages + 121；流程图 `notes/diagrams/` |
 | 2026-07-12 | 理论题规则：Agent **随机出**，学过/未学均可；零碎自测，非必修 |
+| 2026-07-13 | **D13 完成**，自评 3 / Agent 4；System Prompt A/B/C 选 B + 283 移动零 |
 
 ---
 
@@ -174,6 +178,7 @@ Next:   D13 System Prompt 设计 · 3 版对比
 | `exercises/day10/cot_lab.py` | D10 CoT 对比实验 |
 | `exercises/day11/stream_chat.py` | D11 流式 CLI |
 | `exercises/day12/history_chat.py` | D12 多轮对话 |
+| `exercises/day13/system_prompt_lab.py` | D13 System Prompt 三版对比 |
 | `notes/diagrams/day12-messages-flow.md` | D12 messages 流程图 |
 | GitHub `huang-CG/ai_agent_learning` | D5 远程仓库 |
 
