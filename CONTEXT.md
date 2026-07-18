@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-17 | 状态：**D16 ✅ 完成**
+> 最后更新：2026-07-18 | 状态：**D17 ✅ · Phase 1 通关**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    16 / 90 ✅
-Phase:  1 (D16/17 进行中)
-Next:   D17 个人知识库 QA（拼 Prompt）· Phase1 复盘 · 补力扣26
+Day:    17 / 90 ✅
+Phase:  1 ✅ 通关（10/10）
+Next:   D18 Agent 是什么 · 感知-推理-决策-执行
 ```
 
 ---
@@ -38,7 +38,7 @@ Next:   D17 个人知识库 QA（拼 Prompt）· Phase1 复盘 · 补力扣26
 | Ph | 范围 | 状态 | 通关标准 |
 |---|---|---|---|
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
-| 1 | D8–17 | 🔄 9/10 | Prompt 实验 + Function Calling |
+| 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ⬜ | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
@@ -52,6 +52,7 @@ Next:   D17 个人知识库 QA（拼 Prompt）· Phase1 复盘 · 补力扣26
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D17 | 2026-07-18 | 3h | 拼Prompt QA✅ 对比RAG✅ Phase1复盘✅ 26双指针✅ | 先问del/remove再写双指针 | 5 | 4 |
 | D16 | 2026-07-17 | 3h | RAG概念✅ Dify零代码✅ 开/关知识库对比✅ 验收口述✅ | Dify配置乱；缺Embedding；模板OpenAI；力扣26顺延 | 4 | 4 |
 | D15 | 2026-07-16 | 3h | FC实战tool_chat✅ 时间+计算器✅ 多轮循环修复✅ 27移除✅ | 单轮bug需排查；模型偶编时间；终端重绘 | 4 | 4 |
 | D14 | 2026-07-14 | 3h | FC原理✅ 流程图✅ Schema三角✅ 88合并✅ | 88下标/m·n/越界需讲；文档示例易混 | 4 | 4 |
@@ -117,6 +118,8 @@ Next:   D17 个人知识库 QA（拼 Prompt）· Phase1 复盘 · 补力扣26
 
 **D16**：RAG 概念（Embedding/向量/余弦/top-k）；Dify 知识库+Chatflow 零代码；开/关知识库对比降幻觉；硅基流动 Embedding
 
+**D17**：拼 Prompt 知识库 QA（`kb_qa.py`）；拼 Prompt vs RAG 对比；Phase 1 复盘；力扣 26 双指针
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -160,6 +163,7 @@ Next:   D17 个人知识库 QA（拼 Prompt）· Phase1 复盘 · 补力扣26
 | 2026-07-16 | Cursor 终端拖动重绘 bug：外部 PS 正常；设置 `windowsUseConptyDll: true`；`gpuAcceleration: auto`（off 会卡） |
 | 2026-07-16 | **D15 完成**，自评 4 / Agent 4；FC 实战 tool_chat（时间+计算器）+ 27 移除元素 |
 | 2026-07-17 | **D16 完成**，自评 4 / Agent 4；RAG 概念 + Dify 零代码；力扣 26 顺延 D17 |
+| 2026-07-18 | **D17 完成**，自评 5 / Agent 4；拼 Prompt QA + Phase 1 通关；力扣 26 |
 
 ---
 
@@ -196,6 +200,8 @@ Next:   D17 个人知识库 QA（拼 Prompt）· Phase1 复盘 · 补力扣26
 | `exercises/day15/tool_chat.py` | D15 FC 实战（时间+计算器） |
 | `exercises/day16/README.md` | D16 RAG 概念 + Dify 步骤 |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
+| `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
+| `exercises/day17/knowledge.md` | D17 知识库文档 |
 | `notes/diagrams/day12-messages-flow.md` | D12 messages 流程图 |
 | `notes/diagrams/day14-function-calling-flow.md` | D14 Function Calling 流程图 |
 | `notes/diagrams/day16-rag-flow.md` | D16 RAG 流程图 |
