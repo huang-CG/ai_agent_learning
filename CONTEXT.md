@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-20 | 状态：**D19 ✅ 完成 · Phase 2 进行中**
+> 最后更新：2026-07-21 | 状态：**D20 ✅ 完成 · Phase 2 进行中**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    19 / 90 ✅
-Phase:  2 (D19/27 进行中 · 2/10)
-Next:   D20 工具 Schema 设计 · 天气/搜索/计算 3 个工具定义
+Day:    20 / 90 ✅
+Phase:  2 (D20/27 进行中 · 3/10)
+Next:   D21 手写 ReAct Agent（一）· 主循环 + 解析 Thought/Action
 ```
 
 ---
@@ -39,7 +39,7 @@ Next:   D20 工具 Schema 设计 · 天气/搜索/计算 3 个工具定义
 |---|---|---|---|
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
-| 2 | D18–27 | 🔄 2/10 | 手写 ReAct + LangChain 重写 |
+| 2 | D18–27 | 🔄 3/10 | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
@@ -52,6 +52,7 @@ Next:   D20 工具 Schema 设计 · 天气/搜索/计算 3 个工具定义
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D20 | 2026-07-21 | 2.5h | 工具Schema三字段✅ GOOD/BAD对照✅ 口头4题3对✅ 350 Counter✅ 理论题归档✅ | 传参格式归属需点拨；开场自拟题已纠正+立红线 | 4 | 4 |
 | D19 | 2026-07-20 | 3h | ReAct三台词✅ 手写2轮示例✅ 对齐FC✅ 349双set✅ | 349先list查找需点拨；AC等术语初学 | 4 | 4 |
 | D18 | 2026-07-19 | 3h | Agent定义✅ 四步循环✅ vs Chatbot表✅ 136五种解法笔记✅ | O(n)/O(1)题意需讲；异或待消化 | 4 | 4 |
 | D17 | 2026-07-18 | 3h | 拼Prompt QA✅ 对比RAG✅ Phase1复盘✅ 26双指针✅ | 先问del/remove再写双指针 | 5 | 4 |
@@ -126,6 +127,8 @@ Next:   D20 工具 Schema 设计 · 天气/搜索/计算 3 个工具定义
 
 **D19**：ReAct 三台词（Thought/Action/Observation→Final Answer）；手写 2 轮示例；与 FC 同构；力扣 349 双 set 交集
 
+**D20**：工具 Schema 三字段（`name`/`description`/`parameters`）；描述质量决定调用准确率（何时调→function.description，怎么传→参数 description）；GOOD vs BAD 对照；力扣 350 交集 II（Counter 取 min / 排序双指针 / 手动字典）；理论题归档到 `notes/理论题归档.md`
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -172,6 +175,7 @@ Next:   D20 工具 Schema 设计 · 天气/搜索/计算 3 个工具定义
 | 2026-07-18 | **D17 完成**，自评 5 / Agent 4；拼 Prompt QA + Phase 1 通关；力扣 26 |
 | 2026-07-19 | **D18 完成**，自评 4 / Agent 4；Agent 定义 + vs Chatbot；力扣 136 |
 | 2026-07-20 | **D19 完成**，自评 4 / Agent 4；ReAct 手写示例 + 力扣 349 |
+| 2026-07-21 | **D20 完成**，自评 4 / Agent 4；工具 Schema 三字段 + 力扣 350；新建 `notes/理论题归档.md` + 立「禁止自拟题」红线 |
 
 ---
 
@@ -193,6 +197,7 @@ Next:   D20 工具 Schema 设计 · 天气/搜索/计算 3 个工具定义
 |------|------|
 | `LEARNING_PLAN.md` | 完整 90 天日计划 |
 | `notes/学习笔记.md` | 学员笔记 |
+| `notes/理论题归档.md` | 历日理论题全文（题干/选项/答案） |
 | `CONTEXT.md` | 本文件 |
 | `exercises/day02/calculator.py` | D2 计算器 |
 | `exercises/day03/address_book.py` | D3 通讯录 |
@@ -207,6 +212,7 @@ Next:   D20 工具 Schema 设计 · 天气/搜索/计算 3 个工具定义
 | `exercises/day14/tools_schema_demo.py` | D14 FC 结构演示 |
 | `exercises/day15/tool_chat.py` | D15 FC 实战（时间+计算器） |
 | `exercises/day16/README.md` | D16 RAG 概念 + Dify 步骤 |
+| `exercises/day20/tool_schemas.py` | D20 工具 Schema（GOOD/BAD 对照） |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
 | `exercises/day17/knowledge.md` | D17 知识库文档 |
@@ -238,8 +244,9 @@ Next:   D20 工具 Schema 设计 · 天气/搜索/计算 3 个工具定义
 - 编程题主战场：**力扣中国站**（简单 → 简单+ → 中等）
 - 理论题：Agent **随机自拟**（或牛客挑选）；**不必绑当天课程**；**学过的 + 未学的**都可出（复习/八股/预习）；附参考答案与「为什么」；**不做不算当天未完成**
 - 牛客：仅作概念选择题补充，不作为编程题主来源
+- **理论题批改红线（2026-07-21）**：学员只报「选 C/B」而本对话无题面时 → 先查 `notes/理论题归档.md` / 历史 transcript；**禁止另编一套题假装批改**；找不到就明说并请贴题/截图。出题后须同步写入归档。
 
 ## 换新窗口时
 
 新对话第一句可写：**「继续 AI Agent 学习，请先读 CONTEXT.md」**  
-Agent 靠 `CONTEXT.md`（进度/画像）+ `notes/学习笔记.md`（每日细节）恢复上下文。
+Agent 靠 `CONTEXT.md`（进度/画像）恢复；笔记/理论题归档**按需再读**，不必整本塞进上下文。
