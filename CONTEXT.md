@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-21 | 状态：**D20 ✅ 完成 · Phase 2 进行中**
+> 最后更新：2026-07-22 | 状态：**D21 ✅ 完成 · Phase 2 进行中**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    20 / 90 ✅
-Phase:  2 (D20/27 进行中 · 3/10)
-Next:   D21 手写 ReAct Agent（一）· 主循环 + 解析 Thought/Action
+Day:    21 / 90 ✅
+Phase:  2 (D21/27 进行中 · 4/10)
+Next:   D22 手写 ReAct Agent（二）· 真天气 API + Observation 回传
 ```
 
 ---
@@ -39,7 +39,7 @@ Next:   D21 手写 ReAct Agent（一）· 主循环 + 解析 Thought/Action
 |---|---|---|---|
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
-| 2 | D18–27 | 🔄 3/10 | 手写 ReAct + LangChain 重写 |
+| 2 | D18–27 | 🔄 4/10 | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
@@ -52,6 +52,7 @@ Next:   D21 手写 ReAct Agent（一）· 主循环 + 解析 Thought/Action
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D21 | 2026-07-22 | 2h | ReAct主循环✅ 正则解析✅ max_steps实测✅ 口述循环✅ 242 Counter/sorted✅ | parse_action嵌套括号截断需修；Counter误用.sort | 4 | 4 |
 | D20 | 2026-07-21 | 2.5h | 工具Schema三字段✅ GOOD/BAD对照✅ 口头4题3对✅ 350 Counter✅ 理论题归档✅ | 传参格式归属需点拨；开场自拟题已纠正+立红线 | 4 | 4 |
 | D19 | 2026-07-20 | 3h | ReAct三台词✅ 手写2轮示例✅ 对齐FC✅ 349双set✅ | 349先list查找需点拨；AC等术语初学 | 4 | 4 |
 | D18 | 2026-07-19 | 3h | Agent定义✅ 四步循环✅ vs Chatbot表✅ 136五种解法笔记✅ | O(n)/O(1)题意需讲；异或待消化 | 4 | 4 |
@@ -129,6 +130,8 @@ Next:   D21 手写 ReAct Agent（一）· 主循环 + 解析 Thought/Action
 
 **D20**：工具 Schema 三字段（`name`/`description`/`parameters`）；描述质量决定调用准确率（何时调→function.description，怎么传→参数 description）；GOOD vs BAD 对照；力扣 350 交集 II（Counter 取 min / 排序双指针 / 手动字典）；理论题归档到 `notes/理论题归档.md`
 
+**D21**：手写 ReAct 主循环（`run_react` + scratchpad）；正则解析 Thought/Action/Final Answer；`simulate_tool` 假 Observation；`max_steps` 防死循环；力扣 242（Counter / sorted）
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -176,6 +179,7 @@ Next:   D21 手写 ReAct Agent（一）· 主循环 + 解析 Thought/Action
 | 2026-07-19 | **D18 完成**，自评 4 / Agent 4；Agent 定义 + vs Chatbot；力扣 136 |
 | 2026-07-20 | **D19 完成**，自评 4 / Agent 4；ReAct 手写示例 + 力扣 349 |
 | 2026-07-21 | **D20 完成**，自评 4 / Agent 4；工具 Schema 三字段 + 力扣 350；新建 `notes/理论题归档.md` + 立「禁止自拟题」红线 |
+| 2026-07-22 | **D21 完成**，自评 4 / Agent 4；手写 ReAct 主循环 + max_steps 实测；力扣 242 |
 
 ---
 
@@ -213,6 +217,7 @@ Next:   D21 手写 ReAct Agent（一）· 主循环 + 解析 Thought/Action
 | `exercises/day15/tool_chat.py` | D15 FC 实战（时间+计算器） |
 | `exercises/day16/README.md` | D16 RAG 概念 + Dify 步骤 |
 | `exercises/day20/tool_schemas.py` | D20 工具 Schema（GOOD/BAD 对照） |
+| `exercises/day21/react_agent.py` | D21 手写 ReAct 主循环（模拟工具） |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
 | `exercises/day17/knowledge.md` | D17 知识库文档 |
