@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-07-22 | 状态：**D21 ✅ 完成 · Phase 2 进行中**
+> 最后更新：2026-07-23 | 状态：**D22 ✅ 完成 · Phase 2 进行中**
 
 ---
 
@@ -26,9 +26,9 @@
 ## 当前状态
 
 ```
-Day:    21 / 90 ✅
-Phase:  2 (D21/27 进行中 · 4/10)
-Next:   D22 手写 ReAct Agent（二）· 真天气 API + Observation 回传
+Day:    22 / 90 ✅
+Phase:  2 (D22/27 进行中 · 5/10)
+Next:   D23 Agent 记忆系统 · 短期历史 + 记住用户名字
 ```
 
 ---
@@ -39,7 +39,7 @@ Next:   D22 手写 ReAct Agent（二）· 真天气 API + Observation 回传
 |---|---|---|---|
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
-| 2 | D18–27 | 🔄 4/10 | 手写 ReAct + LangChain 重写 |
+| 2 | D18–27 | 🔄 5/10 | 手写 ReAct + LangChain 重写 |
 | 3 | D28–47 | ⬜ | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
@@ -52,6 +52,7 @@ Next:   D22 手写 ReAct Agent（二）· 真天气 API + Observation 回传
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D22 | 2026-07-23 | 2.5h | 真天气ReAct✅ 北京天气验收✅ Observation口述✅ 383 Counter✅ 理论题归档补解析✅ | Counter<=版本差异；力扣耗时波动 | 4 | 4 |
 | D21 | 2026-07-22 | 2h | ReAct主循环✅ 正则解析✅ max_steps实测✅ 口述循环✅ 242 Counter/sorted✅ | parse_action嵌套括号截断需修；Counter误用.sort | 4 | 4 |
 | D20 | 2026-07-21 | 2.5h | 工具Schema三字段✅ GOOD/BAD对照✅ 口头4题3对✅ 350 Counter✅ 理论题归档✅ | 传参格式归属需点拨；开场自拟题已纠正+立红线 | 4 | 4 |
 | D19 | 2026-07-20 | 3h | ReAct三台词✅ 手写2轮示例✅ 对齐FC✅ 349双set✅ | 349先list查找需点拨；AC等术语初学 | 4 | 4 |
@@ -132,6 +133,8 @@ Next:   D22 手写 ReAct Agent（二）· 真天气 API + Observation 回传
 
 **D21**：手写 ReAct 主循环（`run_react` + scratchpad）；正则解析 Thought/Action/Final Answer；`simulate_tool` 假 Observation；`max_steps` 防死循环；力扣 242（Counter / sorted）
 
+**D22**：真天气 ReAct（`run_tool` + wttr.in）；Observation 来自 JSON；关键路径 D22 打通；力扣 383 赎金信（Counter）
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -180,6 +183,7 @@ Next:   D22 手写 ReAct Agent（二）· 真天气 API + Observation 回传
 | 2026-07-20 | **D19 完成**，自评 4 / Agent 4；ReAct 手写示例 + 力扣 349 |
 | 2026-07-21 | **D20 完成**，自评 4 / Agent 4；工具 Schema 三字段 + 力扣 350；新建 `notes/理论题归档.md` + 立「禁止自拟题」红线 |
 | 2026-07-22 | **D21 完成**，自评 4 / Agent 4；手写 ReAct 主循环 + max_steps 实测；力扣 242 |
+| 2026-07-23 | **D22 完成**，自评 4 / Agent 4；真天气 ReAct + 力扣 383；理论题归档补全逐选项解析 |
 
 ---
 
@@ -218,6 +222,7 @@ Next:   D22 手写 ReAct Agent（二）· 真天气 API + Observation 回传
 | `exercises/day16/README.md` | D16 RAG 概念 + Dify 步骤 |
 | `exercises/day20/tool_schemas.py` | D20 工具 Schema（GOOD/BAD 对照） |
 | `exercises/day21/react_agent.py` | D21 手写 ReAct 主循环（模拟工具） |
+| `exercises/day22/react_weather_agent.py` | D22 真天气 ReAct Agent |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
 | `exercises/day17/knowledge.md` | D17 知识库文档 |
@@ -247,7 +252,7 @@ Next:   D22 手写 ReAct Agent（二）· 真天气 API + Observation 回传
 | **理论选择题** | 1～2 道/天 | **零碎时间**自己做，像八股/概念自测 | Agent **随机出**；学过的/没学过的均可；附参考答案与「为什么」 |
 
 - 编程题主战场：**力扣中国站**（简单 → 简单+ → 中等）
-- 理论题：Agent **随机自拟**（或牛客挑选）；**不必绑当天课程**；**学过的 + 未学的**都可出（复习/八股/预习）；附参考答案与「为什么」；**不做不算当天未完成**
+- 理论题：Agent **随机自拟**（或牛客挑选）；**不必绑当天课程**；**学过的 + 未学的**都可出（复习/八股/预习）；附参考答案与「为什么」；**参考答案须写清为何选该项、为何不选其他选项**；**不做不算当天未完成**
 - 牛客：仅作概念选择题补充，不作为编程题主来源
 - **理论题批改红线（2026-07-21）**：学员只报「选 C/B」而本对话无题面时 → 先查 `notes/理论题归档.md` / 历史 transcript；**禁止另编一套题假装批改**；找不到就明说并请贴题/截图。出题后须同步写入归档。
 
