@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-08-02 | 状态：**D28 完成 → 可进 D29**
+> 最后更新：2026-08-05 | 状态：**D29 完成 → 可进 D30**
 
 ---
 
@@ -26,16 +26,16 @@
 ## 当前状态
 
 ```
-Day:    28 / 90 ✅
+Day:    29 / 90 ✅
 Phase:  3（进行中）
-Next:   D29（LangChain Agent）
+Next:   D30（文档加载与分割）
 ```
 
-### 复盘日程（Agent 维护 · 2026-08-02）
+### 复盘日程（Agent 维护 · 2026-08-05）
 
 | 类型 | 周期 | 时长 | 期间 | 封顶 | 下次触发 | 状态 |
 |------|------|------|------|------|----------|------|
-| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D28 起已计 **1/7**（满 7 后触发） | ⬜ 待触发 |
+| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D28 起已计 **2/7**（满 7 后触发） | ⬜ 待触发 |
 | **阶段复盘** | 每 **Phase 通关** | 固定 3 天（含 Day1 摸底） | 暂停每日新课 | 最多 3 天 | Phase 3 通关后 | ✅ Phase 2 已完成 |
 
 > Agent 在新窗口读 CONTEXT 时须先看上表：到期则提醒进入复盘，不默认开新课。
@@ -49,7 +49,7 @@ Next:   D29（LangChain Agent）
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ✅ 10/10 | 手写 ReAct + LangChain 重写 |
-| 3 | D28–47 | 🔄 1/20 | RAG Agent + Web UI |
+| 3 | D28–47 | 🔄 2/20 | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
 | 6 | D68–82 | ⬜ | 毕业综合项目 |
@@ -61,6 +61,7 @@ Next:   D29（LangChain Agent）
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D29 | 2026-08-05 | 约3h | create_agent闭环✅ messages轨迹见tool Observation✅ try/except✅；448 set查缺✅ | 体感与D27高度重合（API相同）；计划旧API名已澄清用create_agent | 4 | 4 |
 | D28 | 2026-08-02 | 约3h | Phase3开篇：3×@tool✅ Schema打印✅ 直调✅ bind_tools选型✅；977双指针✅；力扣已做清单✅ | 开场口述主信号偏；docstring与签名曾不一致（已修）；误出136已建防重 | 4 | 4 |
 | D27 | 2026-07-28 | 约3h | LangChain 天气 Agent✅（天气/计算验收）README✅；进入 Phase 2 复盘 Day1✅ | 框架细节与安全点记忆断点；阶段口述偏弱 | 3 | 3 |
 | D26 | 2026-07-27 | 2.5h | LangChain Hello✅ 对比表✅ 414第三大数✅ 少脚手架实践✅ | 理论题0/2；概念映射先懵后通 | 4 | 4 |
@@ -162,6 +163,8 @@ Next:   D29（LangChain Agent）
 
 **D28**：LangChain Tools 专题；`@tool`→Schema→`invoke`→`bind_tools`/`tool_calls`；厘清与 `create_agent` 差在「谁执行 Observation」；力扣 977；新建 `notes/力扣已做.md`
 
+**D29**：`create_agent` 组装闭环（时间+温度工具）；`messages` 轨迹见 `tool` Observation；try/except；力扣 448；学员反馈与 D27 API 重合（计划旧名已澄清）
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -218,6 +221,7 @@ Next:   D29（LangChain Agent）
 | 2026-07-28 | **D27 完成**，自评 3 / Agent 3；LangChain 重写天气 Agent 跑通；确认进入 Phase 2 复盘 |
 | 2026-07-29 | **复盘规则定稿**：周复盘固定 2 天（Day1 摸底+计划，Day2 执行）；阶段复盘固定 3 天（Day1 摸底+计划，Day2/Day3 执行）；按每日可用时长动态裁剪 |
 | 2026-08-02 | **D28 完成**，自评 4 / Agent 4；Phase 3 开篇；新建 `notes/力扣已做.md`（出题前必查） |
+| 2026-08-05 | **D29 完成**，自评 4 / Agent 4；create_agent 闭环 + messages 轨迹；力扣 448 |
 | 2026-08-02 | 新建 `notes/力扣已做.md`；约定出题前必查，禁止重复已做题号 |
 | 2026-07-29 | **Phase 2 复盘 Day1 完成**：60 分钟口述摸底 + 复盘计划落地到 `notes/复盘归档.md` |
 ---
@@ -266,6 +270,8 @@ Next:   D29（LangChain Agent）
 | `exercises/day25/run_eval.py` | D25 10 题工具选择评测 |
 | `exercises/day28/tools_lab.py` | D28 LangChain Tools 实验 |
 | `exercises/day28/README.md` | D28 验收与时间盒 |
+| `exercises/day29/agent_lab.py` | D29 LangChain Agent 组装 |
+| `exercises/day29/README.md` | D29 验收与时间盒 |
 | `notes/diagrams/day24-agent-architectures.md` | D24 三架构流程图 |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
