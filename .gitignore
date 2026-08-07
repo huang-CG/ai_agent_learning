@@ -9,3 +9,4 @@ API_key*
 .idea/
 .vscode/
 *.log
+**/chroma_db/

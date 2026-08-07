@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-08-06 | 状态：**D30 完成 → 可进 D31**
+> 最后更新：2026-08-07 | 状态：**D31 完成 → 可进 D32**
 
 ---
 
@@ -26,16 +26,16 @@
 ## 当前状态
 
 ```
-Day:    30 / 90 ✅
+Day:    31 / 90 ✅
 Phase:  3（进行中）
-Next:   D31（Embedding 与向量库）
+Next:   D32（完整 RAG 管道 · 关键路径）
 ```
 
-### 复盘日程（Agent 维护 · 2026-08-06）
+### 复盘日程（Agent 维护 · 2026-08-07）
 
 | 类型 | 周期 | 时长 | 期间 | 封顶 | 下次触发 | 状态 |
 |------|------|------|------|------|----------|------|
-| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D28 起已计 **3/7**（满 7 后触发） | ⬜ 待触发 |
+| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D28 起已计 **4/7**（满 7 后触发） | ⬜ 待触发 |
 | **阶段复盘** | 每 **Phase 通关** | 固定 3 天（含 Day1 摸底） | 暂停每日新课 | 最多 3 天 | Phase 3 通关后 | ✅ Phase 2 已完成 |
 
 > Agent 在新窗口读 CONTEXT 时须先看上表：到期则提醒进入复盘，不默认开新课。
@@ -49,7 +49,7 @@ Next:   D31（Embedding 与向量库）
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ✅ 10/10 | 手写 ReAct + LangChain 重写 |
-| 3 | D28–47 | 🔄 3/20 | RAG Agent + Web UI |
+| 3 | D28–47 | 🔄 4/20 | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
 | 6 | D68–82 | ⬜ | 毕业综合项目 |
@@ -61,6 +61,7 @@ Next:   D31（Embedding 与向量库）
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D31 | 2026-08-07 | 约3h | Embed(硅基bge-m3)+向量检索top-3✅；Chroma崩改InMemoryVectorStore✅；509✅；理论题已出待报 | Py3.14下Chroma写入崩溃；番茄炒蛋检索偏；出题未先读规则已立硬性检查 | 4 | 4 |
 | D30 | 2026-08-06 | 约3h | Load+Split✅ RecursiveCharacterTextSplitter✅ 200/40→8块 vs 100/20→19块对比✅；485✅；理论题已出 | 缺文件判断写成if not text（应exists）；理论题待报 | 4 | 4 |
 | D29 | 2026-08-05 | 约3h | create_agent闭环✅ messages轨迹见tool Observation✅ try/except✅；448 set查缺✅ | 体感与D27高度重合（API相同）；计划旧API名已澄清用create_agent | 4 | 4 |
 | D28 | 2026-08-02 | 约3h | Phase3开篇：3×@tool✅ Schema打印✅ 直调✅ bind_tools选型✅；977双指针✅；力扣已做清单✅ | 开场口述主信号偏；docstring与签名曾不一致（已修）；误出136已建防重 | 4 | 4 |
@@ -168,6 +169,8 @@ Next:   D31（Embedding 与向量库）
 
 **D30**：文档 Load + Split；`RecursiveCharacterTextSplitter`；chunk_size/overlap 对比实验；力扣 485
 
+**D31**：硅基流动 Embedding（`OpenAIEmbeddings` 兼容接口）+ `InMemoryVectorStore` 检索 top-3；Chroma 在 Py3.14/Win 崩溃已绕过；力扣 509
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -226,6 +229,8 @@ Next:   D31（Embedding 与向量库）
 | 2026-08-02 | **D28 完成**，自评 4 / Agent 4；Phase 3 开篇；新建 `notes/力扣已做.md`（出题前必查） |
 | 2026-08-05 | **D29 完成**，自评 4 / Agent 4；create_agent 闭环 + messages 轨迹；力扣 448 |
 | 2026-08-06 | **D30 完成**，自评 4 / Agent 4；文档切块统计与参数对比；力扣 485 |
+| 2026-08-07 | **D31 完成**，自评 4 / Agent 4；Embedding + 向量检索；Chroma 环境崩改内存库；力扣 509 |
+| 2026-08-08 | 出题纪律再强调：每次出理论题/力扣前必须先读 CONTEXT「每日刷题」+ 理论题「协作约定」；禁止不读规则就出题、禁止理论题默认绑当天课 |
 | 2026-08-02 | 新建 `notes/力扣已做.md`；约定出题前必查，禁止重复已做题号 |
 | 2026-07-29 | **Phase 2 复盘 Day1 完成**：60 分钟口述摸底 + 复盘计划落地到 `notes/复盘归档.md` |
 ---
@@ -279,6 +284,8 @@ Next:   D31（Embedding 与向量库）
 | `exercises/day30/split_lab.py` | D30 文档加载与切块 |
 | `exercises/day30/sample_doc.md` | D30 切块样例文档 |
 | `exercises/day30/README.md` | D30 验收与时间盒 |
+| `exercises/day31/vector_lab.py` | D31 Embedding + 向量检索（InMemory） |
+| `exercises/day31/README.md` | D31 验收与环境说明 |
 | `notes/diagrams/day24-agent-architectures.md` | D24 三架构流程图 |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
@@ -370,6 +377,10 @@ Next:   D31（Embedding 与向量库）
 ---
 
 ### 每日刷题（D7 起，学员确认 2026-07-08）
+
+> **Agent 硬性检查（2026-08-08 学员再次强调）**  
+> 每次出**理论题**或**力扣**之前，必须先完整读完本小节规则 + `notes/理论题归档.md`「协作约定」（力扣另查 `notes/力扣已做.md`），**读完再出题**。  
+> 禁止不读规则就出题；禁止默认绑死当天课程（理论题须随机，可学过/未学）。多次违规已提醒，不得再犯。
 
 | 类型 | 数量 | 时机 | 规则 |
 |------|------|------|------|

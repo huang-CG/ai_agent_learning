@@ -35,7 +35,7 @@ def load_markdown(path: Path) -> list:
     # text = path.read_text(encoding="utf-8")
     text = path.read_text(encoding="utf-8")
     # 若文件不存在，打印提示并 return []
-    if not text:
+    if not path.exists():
         print(f"文件 {path} 不存在")
         return []
     # return [Document(page_content=text, metadata={"source": str(path)})]
