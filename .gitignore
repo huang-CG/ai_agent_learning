@@ -10,3 +10,4 @@ API_key*
 .vscode/
 *.log
 **/chroma_db/
+**/_tmp_chroma/
