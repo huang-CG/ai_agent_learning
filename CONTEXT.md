@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-08-09 | 状态：**D33 完成 → 可进 D34**
+> 最后更新：2026-08-10 | 状态：**D34 完成 → 下次周复盘（满 7/7）**
 
 ---
 
@@ -26,16 +26,16 @@
 ## 当前状态
 
 ```
-Day:    33 / 90 ✅
+Day:    34 / 90 ✅
 Phase:  3（进行中）
-Next:   D34（RAG + Agent：检索做成工具）
+Next:   周复盘 Day1（D28–D34 满 7 学习日；暂停新课）
 ```
 
-### 复盘日程（Agent 维护 · 2026-08-09）
+### 复盘日程（Agent 维护 · 2026-08-10）
 
 | 类型 | 周期 | 时长 | 期间 | 封顶 | 下次触发 | 状态 |
 |------|------|------|------|------|----------|------|
-| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D28 起已计 **6/7**（满 7 后触发） | ⬜ 待触发 |
+| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D28 起已计 **7/7** → **立即触发** | 🔜 下次开课进入 |
 | **阶段复盘** | 每 **Phase 通关** | 固定 3 天（含 Day1 摸底） | 暂停每日新课 | 最多 3 天 | Phase 3 通关后 | ✅ Phase 2 已完成 |
 
 > Agent 在新窗口读 CONTEXT 时须先看上表：到期则提醒进入复盘，不默认开新课。
@@ -49,7 +49,7 @@ Next:   D34（RAG + Agent：检索做成工具）
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ✅ 10/10 | 手写 ReAct + LangChain 重写 |
-| 3 | D28–47 | 🔄 6/20 | RAG Agent + Web UI |
+| 3 | D28–47 | 🔄 7/20 | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
 | 6 | D68–82 | ⬜ | 毕业综合项目 |
@@ -61,6 +61,7 @@ Next:   D34（RAG + Agent：检索做成工具）
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D34 | 2026-08-10 | 约3h | RAG做成@tool+create_agent按需查库✅；吉祥物调tool/1+1不调✅；66加一✅；理论题已出 | 骨架注释误导用message[]；raise写成OpenAIEmbeddings；tool预览截断易误解 | 4 | 4 |
 | D33 | 2026-08-09 | 约3h | RAG引用+拒编✅ metadata过滤✅ Hybrid口述✅；35搜索插入✅；理论题已出 | format_sources漏parts=[]；拒答仍标出处后改prompt；裸写README路径再踩坑；35初稿误用in | 4 | 4 |
 | D32 | 2026-08-08 | 约3h | 完整RAG六步✅ PDF问答✅ 无答案拒编✅ chunk 200vs80对比✅；704二分✅；理论题已出 | 未保存导致跑旧文件；run_rag漏build_llm；二分初稿未缩区间 | 4 | 4 |
 | D31 | 2026-08-07 | 约3h | Embed(硅基bge-m3)+向量检索top-3✅；Chroma崩改InMemoryVectorStore✅；509✅；理论B/B | Py3.14下Chroma写入崩溃；番茄炒蛋检索偏；出题未先读规则已立硬性检查 | 4 | 4 |
@@ -177,6 +178,8 @@ Next:   D34（RAG + Agent：检索做成工具）
 
 **D33**：RAG 引用（source/chunk_id）+ 拒编；metadata 过滤；Hybrid Search 概念；力扣 35 插入位置
 
+**D34**：RAG 检索做成 `@tool` + `create_agent` 按需调用；力扣 66 加一 / 从右往左进位
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -236,6 +239,7 @@ Next:   D34（RAG + Agent：检索做成工具）
 | 2026-08-05 | **D29 完成**，自评 4 / Agent 4；create_agent 闭环 + messages 轨迹；力扣 448 |
 | 2026-08-06 | **D30 完成**，自评 4 / Agent 4；文档切块统计与参数对比；力扣 485 |
 | 2026-08-07 | **D31 完成**，自评 4 / Agent 4；Embedding + 向量检索；Chroma 环境崩改内存库；力扣 509 |
+| 2026-08-10 | **D34 完成**，自评 4 / Agent 4；RAG+Agent 按需检索；力扣 66；**周复盘触发（7/7）** |
 | 2026-08-09 | **D33 完成**，自评 4 / Agent 4；RAG 引用/拒编/metadata；力扣 35 |
 | 2026-08-09 | 理论题出题后**不要**再提示「答完报 B / B 这种格式」 |
 | 2026-08-08 | 出题纪律再强调：每次出理论题/力扣前必须先读 CONTEXT「每日刷题」+ 理论题「协作约定」；禁止不读规则就出题、禁止理论题默认绑当天课 |
@@ -299,6 +303,8 @@ Next:   D34（RAG + Agent：检索做成工具）
 | `exercises/day32/README.md` | D32 验收与时间盒 |
 | `exercises/day33/rag_cite_lab.py` | D33 RAG 引用 / 拒编 / metadata 过滤 |
 | `exercises/day33/README.md` | D33 验收与时间盒 |
+| `exercises/day34/rag_agent_lab.py` | D34 RAG 检索做成 Agent 工具 |
+| `exercises/day34/README.md` | D34 验收与时间盒 |
 | `notes/diagrams/day24-agent-architectures.md` | D24 三架构流程图 |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
