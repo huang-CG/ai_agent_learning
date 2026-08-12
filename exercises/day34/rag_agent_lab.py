@@ -156,9 +156,9 @@ def ask(agent, question: str) -> None:
             msg_type = getattr(message, "type", type(message).__name__)
             content = getattr(message, "content", "") or ""
             if msg_type == "tool":
-                print(f"tool: {str(content)[:80]}")
+                print(f"tool: {str(content)}")
             else:
-                print(f"{msg_type}: {content}")
+                print(f"{msg_type}: {content}111")
         last = result["messages"][-1]
         print(f"answer: {getattr(last, 'content', last)}")
     except Exception as e:
