@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-08-13 | 状态：**D35 ✅ → 下次 D36**
+> 最后更新：2026-08-15 | 状态：**D36 ✅ → 下次 D37**
 
 ---
 
@@ -26,16 +26,16 @@
 ## 当前状态
 
 ```
-Day:    35 / 90 ✅
+Day:    36 / 90 ✅
 Phase:  3（进行中）
-Next:   D36（SQL Agent 概念）
+Next:   D37（文件操作工具）
 ```
 
-### 复盘日程（Agent 维护 · 2026-08-13）
+### 复盘日程（Agent 维护 · 2026-08-15）
 
 | 类型 | 周期 | 时长 | 期间 | 封顶 | 下次触发 | 状态 |
 |------|------|------|------|------|----------|------|
-| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D35 起计 **1/7**（满 7 后触发） | ✅ 第 1 次完成（D28–D34） |
+| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D35 起计 **2/7**（满 7 后触发） | ✅ 第 1 次完成（D28–D34） |
 | **阶段复盘** | 每 **Phase 通关** | 固定 3 天（含 Day1 摸底） | 暂停每日新课 | 最多 3 天 | Phase 3 通关后 | ✅ Phase 2 已完成 |
 
 > Agent 在新窗口读 CONTEXT 时须先看上表：到期则提醒进入复盘，不默认开新课。
@@ -49,7 +49,7 @@ Next:   D36（SQL Agent 概念）
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ✅ 10/10 | 手写 ReAct + LangChain 重写 |
-| 3 | D28–47 | 🔄 8/20 | RAG Agent + Web UI |
+| 3 | D28–47 | 🔄 9/20 | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
 | 6 | D68–82 | ⬜ | 毕业综合项目 |
@@ -61,6 +61,7 @@ Next:   D36（SQL Agent 概念）
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D36 | 2026-08-15 | 约3h | SQLite建库+SELECT冒烟✅；run_sql只读+create_agent Text-to-SQL✅；人数4/广州2✅；125回文✅；理论B/B | execute_select误用path（应DB_PATH）；125跳过字符时越界后改先过滤 | 4 | 4 |
 | D35 | 2026-08-13 | 2.5h | ddgs裸搜冒烟✅；web_search@tool+create_agent按需联网✅；新闻调tool/1+1不调✅；69二分✅；理论B/B | ask混用dict/对象（.content vs []）；二分曾l+=1后改l=mid+1、return r | 4 | 4 |
 | D34 | 2026-08-10 | 约3h | RAG做成@tool+create_agent按需查库✅；吉祥物调tool/1+1不调✅；66加一✅；理论题已出 | 骨架注释误导用message[]；raise写成OpenAIEmbeddings；tool预览截断易误解 | 4 | 4 |
 | D33 | 2026-08-09 | 约3h | RAG引用+拒编✅ metadata过滤✅ Hybrid口述✅；35搜索插入✅；理论题已出 | format_sources漏parts=[]；拒答仍标出处后改prompt；裸写README路径再踩坑；35初稿误用in | 4 | 4 |
@@ -183,6 +184,8 @@ Next:   D36（SQL Agent 概念）
 
 **D35**：`ddgs` 真搜索 + `@tool web_search` + `create_agent` 按需联网；RAG vs 搜索选型；力扣 69 二分求平方根 / 退出返回 `r`
 
+**D36**：SQLite + Text-to-SQL（`run_sql` 只允许 SELECT）+ `SCHEMA_HINT`；RAG/搜索/SQL 选型；力扣 125 回文 / 先滤再双指针
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -242,6 +245,7 @@ Next:   D36（SQL Agent 概念）
 | 2026-08-05 | **D29 完成**，自评 4 / Agent 4；create_agent 闭环 + messages 轨迹；力扣 448 |
 | 2026-08-06 | **D30 完成**，自评 4 / Agent 4；文档切块统计与参数对比；力扣 485 |
 | 2026-08-07 | **D31 完成**，自评 4 / Agent 4；Embedding + 向量检索；Chroma 环境崩改内存库；力扣 509 |
+| 2026-08-15 | **D36 完成**，自评 4 / Agent 4；SQL Agent Text-to-SQL；力扣 125；周复盘计数 **2/7** |
 | 2026-08-13 | **D35 完成**，自评 4 / Agent 4；ddgs + web_search Agent；力扣 69；周复盘计数 **1/7** |
 | 2026-08-12 | **第 1 次周复盘完成**（D28–D34）：知识清单+错题表+小改造；归档 `notes/复盘归档.md` |
 | 2026-08-10 | **D34 完成**，自评 4 / Agent 4；RAG+Agent 按需检索；力扣 66；**周复盘触发（7/7）** |
@@ -312,6 +316,8 @@ Next:   D36（SQL Agent 概念）
 | `exercises/day34/README.md` | D34 验收与时间盒 |
 | `exercises/day35/search_agent_lab.py` | D35 web_search Agent（ddgs） |
 | `exercises/day35/README.md` | D35 验收与时间盒 |
+| `exercises/day36/sql_agent_lab.py` | D36 SQL Agent（Text-to-SQL） |
+| `exercises/day36/README.md` | D36 验收与时间盒 |
 | `notes/diagrams/day24-agent-architectures.md` | D24 三架构流程图 |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
