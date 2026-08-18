@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-08-16 | 状态：**D37 ✅ → 下次 D38**
+> 最后更新：2026-08-17 | 状态：**D38 ✅ → 下次 D39**
 
 ---
 
@@ -26,16 +26,16 @@
 ## 当前状态
 
 ```
-Day:    37 / 90 ✅
+Day:    38 / 90 ✅
 Phase:  3（进行中）
-Next:   D38（Prompt 工程进阶）
+Next:   D39（LangSmith 调试）
 ```
 
-### 复盘日程（Agent 维护 · 2026-08-16）
+### 复盘日程（Agent 维护 · 2026-08-17）
 
 | 类型 | 周期 | 时长 | 期间 | 封顶 | 下次触发 | 状态 |
 |------|------|------|------|------|----------|------|
-| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D35 起计 **3/7**（满 7 后触发） | ✅ 第 1 次完成（D28–D34） |
+| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D35 起计 **4/7**（满 7 后触发） | ✅ 第 1 次完成（D28–D34） |
 | **阶段复盘** | 每 **Phase 通关** | 固定 3 天（含 Day1 摸底） | 暂停每日新课 | 最多 3 天 | Phase 3 通关后 | ✅ Phase 2 已完成 |
 
 > Agent 在新窗口读 CONTEXT 时须先看上表：到期则提醒进入复盘，不默认开新课。
@@ -49,7 +49,7 @@ Next:   D38（Prompt 工程进阶）
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ✅ 10/10 | 手写 ReAct + LangChain 重写 |
-| 3 | D28–47 | 🔄 10/20 | RAG Agent + Web UI |
+| 3 | D28–47 | 🔄 11/20 | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
 | 6 | D68–82 | ⬜ | 毕业综合项目 |
@@ -61,6 +61,7 @@ Next:   D38（Prompt 工程进阶）
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D38 | 2026-08-17 | 约3h | 弱/强system prompt+JSON Few-shot✅；强版label/reason稳定✅；14两种写法已记；理论D/B | Few-shot曾把用户句塞进JSON；ask又用[]; 14提早return/or顺序/for-elif | 3 | 3 |
 | D37 | 2026-08-16 | 约3h | 文件沙箱三工具✅；resolve+relative_to拒逃出✅；Agent总结note.txt✅；58从右扫✅；理论C/A | list_dir须return勿只print；路径esercises笔误；力扣s[-1]需i>0放and最前 | 4 | 4 |
 | D36 | 2026-08-15 | 约3h | SQLite建库+SELECT冒烟✅；run_sql只读+create_agent Text-to-SQL✅；人数4/广州2✅；125回文✅；理论B/B | execute_select误用path（应DB_PATH）；125跳过字符时越界后改先过滤 | 4 | 4 |
 | D35 | 2026-08-13 | 2.5h | ddgs裸搜冒烟✅；web_search@tool+create_agent按需联网✅；新闻调tool/1+1不调✅；69二分✅；理论B/B | ask混用dict/对象（.content vs []）；二分曾l+=1后改l=mid+1、return r | 4 | 4 |
@@ -189,6 +190,8 @@ Next:   D38（Prompt 工程进阶）
 
 **D37**：文件工具沙箱（`safe_path` + list/read/write）；`Path /` 拼接与 `resolve`；力扣 58 从右扫最后一个单词 / `i>0` 防 `s[-1]`
 
+**D38**：Agent system prompt + Few-shot + JSON 字段约束；弱版能 loads 但键名不稳；力扣 14 边扫边缩短前缀
+
 **薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
@@ -253,6 +256,7 @@ Next:   D38（Prompt 工程进阶）
 | 2026-08-12 | **第 1 次周复盘完成**（D28–D34）：知识清单+错题表+小改造；归档 `notes/复盘归档.md` |
 | 2026-08-10 | **D34 完成**，自评 4 / Agent 4；RAG+Agent 按需检索；力扣 66；**周复盘触发（7/7）** |
 | 2026-08-09 | **D33 完成**，自评 4 / Agent 4；RAG 引用/拒编/metadata；力扣 35 |
+| 2026-08-17 | **D38 完成**，自评 3 / Agent 3；JSON Few-shot 格式稳定；力扣 14 耗时长；周复盘计数 **4/7** |
 | 2026-08-16 | **D37 完成**，自评 4 / Agent 4；文件沙箱工具；力扣 58；周复盘计数 **3/7** |
 | 2026-08-16 | 理论题正确项打散：禁止习惯性 B/B，同日两题不要同一字母 |
 | 2026-08-09 | 理论题出题后**不要**再提示「答完报 B / B 这种格式」 |
@@ -325,6 +329,8 @@ Next:   D38（Prompt 工程进阶）
 | `exercises/day36/README.md` | D36 验收与时间盒 |
 | `exercises/day37/file_agent_lab.py` | D37 文件工具（沙箱） |
 | `exercises/day37/README.md` | D37 验收与时间盒 |
+| `exercises/day38/prompt_agent_lab.py` | D38 Prompt + JSON Few-shot Agent |
+| `exercises/day38/README.md` | D38 验收与时间盒 |
 | `notes/diagrams/day24-agent-architectures.md` | D24 三架构流程图 |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
