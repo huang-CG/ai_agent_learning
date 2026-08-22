@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-08-20 | 状态：**D40 ✅ → 下次 D41**
+> 最后更新：2026-08-21 | 状态：**D41 ✅ → 下次周复盘（D35–D41）**
 
 ---
 
@@ -26,16 +26,16 @@
 ## 当前状态
 
 ```
-Day:    40 / 90 ✅
+Day:    41 / 90 ✅
 Phase:  3（进行中）
-Next:   D41（结构化输出）
+Next:   周复盘第 2 次（D35–D41）→ 之后 D42
 ```
 
-### 复盘日程（Agent 维护 · 2026-08-20）
+### 复盘日程（Agent 维护 · 2026-08-21）
 
 | 类型 | 周期 | 时长 | 期间 | 封顶 | 下次触发 | 状态 |
 |------|------|------|------|------|----------|------|
-| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D35 起计 **6/7**（满 7 后触发） | ✅ 第 1 次完成（D28–D34） |
+| **周复盘** | 每 **7 个学习日** | 固定 2 天 | 暂停每日新课 | 最多 2 天 | D35 起计 **7/7 → 下次开场进周复盘** | ✅ 第 1 次完成（D28–D34） |
 | **阶段复盘** | 每 **Phase 通关** | 固定 3 天（含 Day1 摸底） | 暂停每日新课 | 最多 3 天 | Phase 3 通关后 | ✅ Phase 2 已完成 |
 
 > Agent 在新窗口读 CONTEXT 时须先看上表：到期则提醒进入复盘，不默认开新课。
@@ -49,7 +49,7 @@ Next:   D41（结构化输出）
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ✅ 10/10 | 手写 ReAct + LangChain 重写 |
-| 3 | D28–47 | 🔄 13/20 | RAG Agent + Web UI |
+| 3 | D28–47 | 🔄 14/20 | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
 | 6 | D68–82 | ⬜ | 毕业综合项目 |
@@ -61,6 +61,7 @@ Next:   D41（结构化输出）
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D41 | 2026-08-21 | 约3h | Pydantic+with_structured_output✅；两问TicketReport✅；ValidationError✅；392双指针✅；理论C/B | Literal未导入；v4-flash思考模式拒tool_choice；对象/继承需讲 | 3 | 3 |
 | D40 | 2026-08-20 | 约3h | MCP概念+FC对比表✅；Host/Client/Server✅；口头三问✅；344 reverse✅；理论B/A | 对比表曾写「MCP包含FC」；344 print(reverse)得None | 4 | 4 |
 | D39 | 2026-08-18 | 约3h | LangSmith注册US+tracing✅；成功四层trace✅；失败停工具层ValueError✅；70滚动AC；理论A/B | 失败初判成参数错；key_ok未定义；build_agent缩进返回None；三ask同try跳过第三问；Docker镜像/容器说反 | 4 | 4 |
 | D38 | 2026-08-17 | 约3h | 弱/强system prompt+JSON Few-shot✅；强版label/reason稳定✅；14两种写法已记；理论D/B | Few-shot曾把用户句塞进JSON；ask又用[]; 14提早return/or顺序/for-elif | 3 | 3 |
@@ -198,7 +199,9 @@ Next:   D41（结构化输出）
 
 **D40**：MCP = Model Context Protocol；与 FC 不同层不替代；Host/Client/Server；单 App 优先 `@tool`；力扣 344 `reverse` 返回 None
 
-**薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练
+**D41**：Pydantic `BaseModel` + `with_structured_output`；继承≠传业务参；思考模式慎用 tool_choice；力扣 392 子序列双指针
+
+**薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练；**OOP 继承 / 对象 vs 类** 需多对照例子
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
 
@@ -262,6 +265,7 @@ Next:   D41（结构化输出）
 | 2026-08-12 | **第 1 次周复盘完成**（D28–D34）：知识清单+错题表+小改造；归档 `notes/复盘归档.md` |
 | 2026-08-10 | **D34 完成**，自评 4 / Agent 4；RAG+Agent 按需检索；力扣 66；**周复盘触发（7/7）** |
 | 2026-08-09 | **D33 完成**，自评 4 / Agent 4；RAG 引用/拒编/metadata；力扣 35 |
+| 2026-08-21 | **D41 完成**，自评 3 / Agent 3；Pydantic structured output；力扣 392；**周复盘计数 7/7 → 下次进周复盘** |
 | 2026-08-20 | **D40 完成**，自评 4 / Agent 4；MCP vs FC 对比表；力扣 344；周复盘计数 **6/7** |
 | 2026-08-18 | **D39 完成**，自评 4 / Agent 4；LangSmith 完整 trace + 失败层分析；力扣 70；周复盘计数 **5/7** |
 | 2026-08-17 | **D38 完成**，自评 3 / Agent 3；JSON Few-shot 格式稳定；力扣 14 耗时长；周复盘计数 **4/7** |
@@ -342,6 +346,8 @@ Next:   D41（结构化输出）
 | `exercises/day39/tracing_lab.py` | D39 LangSmith tracing Agent |
 | `exercises/day39/README.md` | D39 验收与时间盒 |
 | `exercises/day40/README.md` | D40 MCP 概念与 FC 对比 |
+| `exercises/day41/structured_lab.py` | D41 Pydantic structured output |
+| `exercises/day41/README.md` | D41 验收与时间盒 |
 | `notes/diagrams/day24-agent-architectures.md` | D24 三架构流程图 |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |
