@@ -128,8 +128,12 @@ def run_suite(title: str, system_prompt: str) -> None:
         parsed = try_parse(raw)
         print(f"问句：{q}")
         print(f"原文：{raw}")
-        print(f"解析结果：{parsed}，解析成功：{parsed is not None}")
-
+        if parsed is None:
+            print(f"❌ JSON 解析失败")
+        elif 'label' in parsed and 'reason' in parsed:
+            print(f"解析成功：✅ 可用：label={parsed['label']}, reason={parsed['reason']}")
+        else:
+            print(f"⚠ 键名不对：实际 keys = {list(parsed.keys())}")
 
 def main() -> None:
     print("Day 38 · Prompt + JSON\n")
