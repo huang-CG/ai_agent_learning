@@ -1,7 +1,7 @@
 # AI Agent 学习上下文（Agent 用）
 
 > 极简进度文档，供每日对话快速恢复上下文  
-> 最后更新：2026-08-24 | 状态：**周复盘第 2 次完成（D35–D41）→ 下次 D42**
+> 最后更新：2026-08-25 | 状态：**D42 ✅ → 下次 D43（文档助手 CLI 完善）**
 
 ---
 
@@ -26,12 +26,12 @@
 ## 当前状态
 
 ```
-Day:    41 / 90 ✅
+Day:    42 / 90 ✅
 Phase:  3（进行中）
-Next:   D42（智能文档助手 Agent · CLI）
+Next:   D43（智能文档助手 · CLI 完善）
 ```
 
-### 复盘日程（Agent 维护 · 2026-08-24）
+### 复盘日程（Agent 维护 · 2026-08-25）
 
 | 类型 | 周期 | 时长 | 期间 | 封顶 | 下次触发 | 状态 |
 |------|------|------|------|------|----------|------|
@@ -49,7 +49,7 @@ Next:   D42（智能文档助手 Agent · CLI）
 | 0 | D1–7 | ✅ 7/7 | Python + 首次 API 调用 |
 | 1 | D8–17 | ✅ 10/10 | Prompt 实验 + Function Calling |
 | 2 | D18–27 | ✅ 10/10 | 手写 ReAct + LangChain 重写 |
-| 3 | D28–47 | 🔄 14/20 | RAG Agent + Web UI |
+| 3 | D28–47 | 🔄 15/20 | RAG Agent + Web UI |
 | 4 | D48–57 | ⬜ | LangGraph 多 Agent |
 | 5 | D58–67 | ⬜ | FastAPI 部署 + Docker |
 | 6 | D68–82 | ⬜ | 毕业综合项目 |
@@ -61,6 +61,7 @@ Next:   D42（智能文档助手 Agent · CLI）
 
 | Day | 日期 | 时长 | 完成摘要 | 问题 | 自评 | Agent |
 |-----|------|------|----------|------|------|-------|
+| D42 | 2026-08-25 | 约3h | 三工具文档助手✅；吉祥物/新闻/memo轨迹含tool✅；算术不调工具✅；167双指针✅ | 口述曾把读文件说成SQL；IndentationError；web_search超时有降级 | 4 | 4 |
 | D41 | 2026-08-21 | 约3h | Pydantic+with_structured_output✅；两问TicketReport✅；ValidationError✅；392双指针✅；理论C/B | Literal未导入；v4-flash思考模式拒tool_choice；对象/继承需讲 | 3 | 3 |
 | D40 | 2026-08-20 | 约3h | MCP概念+FC对比表✅；Host/Client/Server✅；口头三问✅；344 reverse✅；理论B/A | 对比表曾写「MCP包含FC」；344 print(reverse)得None | 4 | 4 |
 | D39 | 2026-08-18 | 约3h | LangSmith注册US+tracing✅；成功四层trace✅；失败停工具层ValueError✅；70滚动AC；理论A/B | 失败初判成参数错；key_ok未定义；build_agent缩进返回None；三ask同try跳过第三问；Docker镜像/容器说反 | 4 | 4 |
@@ -201,7 +202,9 @@ Next:   D42（智能文档助手 Agent · CLI）
 
 **D41**：Pydantic `BaseModel` + `with_structured_output`；继承≠传业务参；思考模式慎用 tool_choice；力扣 392 子序列双指针
 
-**薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练；**OOP 继承 / 对象 vs 类** 需多对照例子；走读时易把**注释当实现**（如 SQL `startswith` 大小写）
+**D42**：智能文档助手 CLI 雏形；RAG + web_search + 沙箱读文件三工具同一 Agent；InMemory 替代 Chroma；力扣 167 有序双指针
+
+**薄弱点（持续）**：语法结构；力扣多指针下标；读官方示例易和第三方混淆；交互脚本建议外部 PowerShell 跑（Cursor 终端重绘 bug）；低代码平台（Dify）首次配置易绕；异或等位运算需再练；**OOP 继承 / 对象 vs 类** 需多对照例子；走读时易把**注释当实现**（如 SQL `startswith` 大小写）；工具选型口述偶混（读文件≠SQL）
 
 **学习调整（D4 起）**：Python 理论主线改跟 **廖雪峰教程一条线**；语法题零碎时间补
 
@@ -265,6 +268,7 @@ Next:   D42（智能文档助手 Agent · CLI）
 | 2026-08-12 | **第 1 次周复盘完成**（D28–D34）：知识清单+错题表+小改造；归档 `notes/复盘归档.md` |
 | 2026-08-10 | **D34 完成**，自评 4 / Agent 4；RAG+Agent 按需检索；力扣 66；**周复盘触发（7/7）** |
 | 2026-08-09 | **D33 完成**，自评 4 / Agent 4；RAG 引用/拒编/metadata；力扣 35 |
+| 2026-08-25 | **D42 完成**，自评 4 / Agent 4；三工具文档助手 CLI 雏形；力扣 167；周复盘计数 **1/7** |
 | 2026-08-24 | **第 2 次周复盘完成**（D35–D41）：知识清单+错题表+小改造（day38 键名检查）；归档 `notes/复盘归档.md`；下次新课 **D42** |
 | 2026-08-22 | **周复盘第 2 次 Day1**（D35–D41）：12 问摸底 + 知识清单草稿；小改造顺延 Day2 |
 | 2026-08-21 | **D41 完成**，自评 3 / Agent 3；Pydantic structured output；力扣 392；**周复盘计数 7/7 → 下次进周复盘** |
@@ -350,6 +354,9 @@ Next:   D42（智能文档助手 Agent · CLI）
 | `exercises/day40/README.md` | D40 MCP 概念与 FC 对比 |
 | `exercises/day41/structured_lab.py` | D41 Pydantic structured output |
 | `exercises/day41/README.md` | D41 验收与时间盒 |
+| `exercises/day42/doc_assistant.py` | D42 智能文档助手（三工具 CLI 雏形） |
+| `exercises/day42/README.md` | D42 验收与时间盒 |
+| `exercises/day42/sandbox/memo.txt` | D42 沙箱样例备忘 |
 | `notes/diagrams/day24-agent-architectures.md` | D24 三架构流程图 |
 | `exercises/day16/sample_kb.md` | D16 知识库样例 |
 | `exercises/day17/kb_qa.py` | D17 拼 Prompt 知识库 QA |

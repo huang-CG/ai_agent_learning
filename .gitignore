@@ -11,3 +11,5 @@ API_key*
 *.log
 **/chroma_db/
 **/_tmp_chroma/
+# 本地生成的 SQLite（如 D36 demo.db），不入库
+*.db
